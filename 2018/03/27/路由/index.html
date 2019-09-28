@@ -1,0 +1,450 @@
+<!DOCTYPE HTML>
+<html>
+
+<head><meta name="generator" content="Hexo 3.9.0">
+	<link rel="bookmark" type="image/x-icon" href="https://vuejs.bootcss.com/images/logo.png">
+	<link rel="shortcut icon" href="https://vuejs.bootcss.com/images/logo.png">
+	
+			    <title>
+    前端小伙
+    </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="/css/mic_main.css">
+    <link rel="stylesheet" href="/css/dropdownMenu.css">
+    <meta name="keywords" content="miccall">
+    
+    	<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	 
+    <noscript>
+        <link rel="stylesheet" href="/css/noscript.css">
+    </noscript>
+    <style type="text/css">
+        body:before {
+          content: ' ';
+          position: fixed;
+          top: 0;
+          background: url('/img/bg.jpg') center 0 no-repeat;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          background-size: cover; 
+        }
+    </style>
+
+			    
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script async type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.scrollex.min.js"></script>
+    <script src="/js/jquery.scrolly.min.js"></script>
+    <script src="/js/skel.min.js"></script>
+    <script src="/js/util.js"></script>
+    <script src="/js/main.js"></script>
+	
+</head>
+    
+		
+<!-- Layouts -->
+
+
+
+<!--  代码渲染  -->
+<link rel="stylesheet" href="/css/prism_coy.css">
+<link rel="stylesheet" href="/css/typo.css">
+<!-- 文章页 -->
+<body class="is-loading">
+    <!-- Wrapper 外包 s-->
+    <div id="wrapper" class="fade-in">
+        <!-- Intro 头部显示 s -->
+        <!-- Intro 头部显示 e -->
+        <!-- Header 头部logo start -->
+        <header id="header">
+    <a href="/" class="logo">HavanaLee</a>
+</header>
+        <!-- Nav 导航条 start -->
+        <nav id="nav" class="special">
+            <ul class="menu links">
+			<!-- Homepage  主页  --> 
+			<li>
+	            <a href="/" rel="nofollow">主页</a>
+	        </li>
+			<!-- categories_name  分类   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">分类</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        <a class="category-link" href="/categories/vue/">vue</a>
+	                    </li></ul>
+	        </li>
+	        
+	        <!-- archives  归档   --> 
+	        
+	        
+		        <!-- Pages 自定义   -->
+		        
+		        <li>
+		            <a href="/gallery/" title="图库">
+		                图库
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/tag/" title="标签">
+		                标签
+		            </a>
+		        </li>
+		        
+
+
+            </ul>
+            <!-- icons 图标   -->
+			<ul class="icons">
+                    
+                    <li>
+                        <a title="github" href="https://github.com/HavanaLee" target="_blank" rel="noopener">
+                            <i class="icon fa fa-github"></i>
+                        </a>
+                    </li>
+                    
+			</ul>
+</nav>
+
+        <div id="main">
+            <div class="post_page_title_img" style="height: 25rem;background-image: url(https://vuejs.bootcss.com/images/logo.png);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;">
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2>路由</h2></a>
+            </div>
+            <!-- Post -->
+            <div class="typo" style="padding: 3rem;">
+                <ul>
+<li>能够安装使用<strong>路由</strong></li>
+</ul>
+<h2 id="路由-什么是"><a href="#路由-什么是" class="headerlink" title="路由-什么是"></a>路由-什么是</h2><p>问：什么是路由？</p>
+<p>答：路由是一个js功能模块，用于解决做个组件切换显示问题的，本身对<strong>组件切换</strong>的各个技术有做<strong>封装</strong>，是更成熟组件切换解决方案，使用起来更高级、方便。</p>
+<blockquote>
+<p>使用路由后，原生的 #锚点超链接、component占位符标签、window.onhashchange、window.location.hash就看不到了</p>
+</blockquote>
+<p>路由：就是浏览器地址栏#锚点信息 与 业务组件的对应关系<br>      内部有对各个实现细节做“封装”(超链接a标签 component占位符标签 window.onhashchange window.location.hash等等)</p>
+<p> 也可以理解为是：超链接 —-&gt; #锚点 ——&gt; 业务组件 的请求路径体现</p>
+<p>路由是对组件切换实现的封装，具体有：#锚点超链接、component占位符标签、window.onhashchange、window.location.hash等等</p>
+<p>为什么使用？</p>
+<p>答：路由是vue开发各个项目必须使用的技术之一，是开发spa项目</p>
+<h2 id="路由-安装"><a href="#路由-安装" class="headerlink" title="路由-安装"></a>路由-安装</h2><p>安装配置，请执行指令：</p>
+<p>路由是一个功能模块(类似vue、axios等)，使用之前需要安装</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yarn  add vue-router</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>依赖包：通过npm i  或 yarn  add 装的东西就是依赖包，每个依赖包内部有<strong>多个</strong>功能模块</p>
+<p>模块：一个js文件内部有做”模块化导出”动作，这个js文件就是一个(功能)模块</p>
+<p>yarn add 依赖包     </p>
+<p>npm  install  依赖包</p>
+</blockquote>
+<h2 id="路由-组件切换-配置路由相关"><a href="#路由-组件切换-配置路由相关" class="headerlink" title="路由-组件切换(配置路由相关)"></a>路由-组件切换(配置路由相关)</h2><p>配置路由步骤：</p>
+<ol>
+<li>在main.js中  引入路由模块、use注册组件、import引入各个业务组件</li>
+<li>在main.js中 创建路由对象，在内部设置 #锚点 与 组件的对应关系，之后路由对象挂载在Vue实例内部</li>
+</ol>
+<p>main.js使用路由示例：</p>
+<p><img src="img(online)/1566265663554.png" alt="1566265663554"></p>
+<p><img src="img(online)/1566265679548.png" alt="1566265679548"></p>
+<h2 id="路由-组件切换-设置切换按钮和占位符"><a href="#路由-组件切换-设置切换按钮和占位符" class="headerlink" title="路由-组件切换(设置切换按钮和占位符)"></a>路由-组件切换(设置切换按钮和占位符)</h2><p>切换按钮：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;router-link  to=&quot;设置#锚点信息&quot;&gt;标签按钮信息&lt;/router-link&gt;</span><br><span class="line">router-link默认生成超链接a标签</span><br></pre></td></tr></table></figure>
+
+<p>组件显示占位符：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;router-view&gt;&lt;/router-view&gt;</span><br></pre></td></tr></table></figure>
+
+<p>在App.vue中设置 切换按钮 和 组件显示占位符：</p>
+<p>总结：</p>
+<p>使用路由实现组件切换效果</p>
+<ol>
+<li>在main.js中 引入路由、注册use、引入业务组件、创建路由对象、Vue实例内部挂载路由对象</li>
+<li>在App.vue中使用router-link 设置切换按钮、使用router-view设置组件显示占位符</li>
+</ol>
+<h2 id="路由-组件切换执行过程分析"><a href="#路由-组件切换执行过程分析" class="headerlink" title="路由-组件切换执行过程分析"></a>路由-组件切换执行过程分析</h2><p>路由规则的匹配过程：</p>
+<ul>
+<li>用户点击 页面的 路由链接router-link，点击的一瞬间，就会修改 浏览器 地址栏 中的 Hash 锚点地址信息，</li>
+<li>当 hash 信息被修改以后，会立即被  路由 监听到   (路由有封装onhashchange事件)</li>
+<li>在onhashchange事件里边感知变化后的hash锚点信息(window.location.hash)，然后与对应的组件进行联系</li>
+<li>组件的显示是通过路由占位符rouer-view显示的</li>
+</ul>
+<h2 id="路由-组件切换-重定向"><a href="#路由-组件切换-重定向" class="headerlink" title="路由-组件切换(重定向)"></a>路由-组件切换(重定向)</h2><p>用户第一次访问网站页面(“/根目录”首页)时，地址栏里边没有“hash锚点”的信息，<br>也就没有对应的组件用于显示，明显项目体验不好，现在可以通过<font color="red">redirect</font>实现重定向效果<br>即 设定“/根目录”与一个<strong>具体路由</strong>联系起来，使得没有任何锚点信息时，就显示这个默认路由对应的组件</p>
+<p>重定向：使得一个路由地址A与另一个路由地址B联系起来，执行A的时候会跳转执行B</p>
+<blockquote>
+<p>路由地址/信息： 就是#锚点信息</p>
+</blockquote>
+<p>示例：</p>
+<p><img src="img(online)/1566266468845.png" alt="1566266468845"></p>
+<h2 id="路由-组件切换-按钮高亮设置"><a href="#路由-组件切换-按钮高亮设置" class="headerlink" title="路由-组件切换(按钮高亮设置)"></a>路由-组件切换(按钮高亮设置)</h2><p>标签按钮被单击访问，其对应组件就显示，为了使得用户体验比较好，给当前单击的按钮设置与众不同的css样式，使得用户可以很清楚地知道是哪个按钮正在被访问，增强用户体验</p>
+<blockquote>
+<p>通过观察，发现一个按钮被单击访问，其对应的html标签就会存在  class=”router-link-active” 的属性值，设置其设置css样式即可</p>
+</blockquote>
+<p>在App.vue中给 router-link-active 设置 css样式,使得选中按钮有样式高亮：</p>
+<p><img src="img(online)/1566266869206.png" alt="1566266869206"></p>
+<p>小结：</p>
+<ol>
+<li>重定向，direct实现该功能</li>
+<li>按钮高亮，每个选中按钮都有class=”router-link-active”属性值，操作属性值设置样式即可</li>
+</ol>
+<h2 id="路由-子路由介绍"><a href="#路由-子路由介绍" class="headerlink" title="路由-子路由介绍"></a>路由-子路由介绍</h2><p>一般项目开发中，App.vue是根基组件(第1级别的)，内部可以有具体业务组件(Home.vue  Movie.vue  Music.vue，它们是第2级别的)</p>
+<p>根据业务需要，业务组件内部还有做内容<strong>分级</strong>显示，这样就可以再创建第3级别的业务组件，第3级别组件的路由 是 第2级别组件路由 的<strong>子路由</strong></p>
+<h2 id="路由-子路由实现"><a href="#路由-子路由实现" class="headerlink" title="路由-子路由实现"></a>路由-子路由实现</h2><p>目标：</p>
+<p>实现组件切换案例效果，具体如下：</p>
+<p>​    App.vue</p>
+<p>​        Home.vue</p>
+<p>​        Movie.vue</p>
+<p>​        Music.vue</p>
+<p>​            Hongkong.vue</p>
+<p>​            Taiwan.vue</p>
+<p>​            Dalu.vue</p>
+<p>实现步骤：</p>
+<ol>
+<li>在components/yinyue目录里边创建  Hongkong.vue 、Taiwan.vue、Dalu.vue</li>
+<li>在main.js中引入各个音乐子级组件模块</li>
+<li>在main.js中 给 Music路由配置子路由，要通过关键字<strong>children</strong>衔接</li>
+<li>在Music.vue组件中 设置 子路由组件显示 <strong>按钮router-link</strong> 和 显示<strong>占位符router-view</strong></li>
+</ol>
+<p>main.js引入、注册子路由组件示例：</p>
+<p><img src="img(online)/1566268180491.png" alt="1566268180491"></p>
+<p>Music.vue中设置单击按钮 和 显示子组件占位符：</p>
+<p><img src="img(online)/1566268208840.png" alt="1566268208840"></p>
+<h2 id="路由-子路由重定向和按钮高亮"><a href="#路由-子路由重定向和按钮高亮" class="headerlink" title="路由-子路由重定向和按钮高亮"></a>路由-子路由重定向和按钮高亮</h2><p>分别在 main.js 和 Music.vue中设置重定向 和 按钮高亮：</p>
+<p><img src="img(online)/1566268503919.png" alt="1566268503919"></p>
+<p>小结：</p>
+<ol>
+<li>创建子级vue组件</li>
+<li><strong>children</strong>衔接父与子的路由信息</li>
+<li>在Music父组件中另行设置 router-link 和  router-view</li>
+<li>重定向：Music路由 和 子路由里边都可以设置</li>
+</ol>
+<h2 id="路由-路由传参-设置和使用参数"><a href="#路由-路由传参-设置和使用参数" class="headerlink" title="路由-路由传参-设置和使用参数"></a>路由-路由传参-设置和使用参数</h2><p>之前传统网站开发，可以在浏览器地址栏设置 ?xx=yy&amp;xx=yy 这样的请求字符串信息并获取做业务处理</p>
+<p>路由根据实际需要有时也需要传递参数，称作 路由传参</p>
+<p>目标：</p>
+<p>制作一个<strong>电影列表</strong>展示页面效果，每个电影可以作为按钮被点击，之后展示<strong>电影详情</strong>页面，并查看每个电影的具体内容，自然电影详情 需要执行 <strong>路由传参</strong>，以便知道是哪个电影被查看</p>
+<p>步骤：</p>
+<ol>
+<li><p>在 组件切换 案例基础上进行修改，进行减法操作(物理vue文件删除、main.js多余组件和路由删除、App.vue多余的切换按钮删除)，只保留 电影Movie.vue 展示</p>
+</li>
+<li><p>创建详情组件 components/Detail.vue</p>
+</li>
+<li><p>在main.js中  给Detail.vue 做 <strong>组件引入</strong> 并 <strong>注册路由</strong></p>
+</li>
+<li><p>在Movie.vue中设置data成员 movieList，设置3个电影，并遍历之，使他们作为列表按钮展示出来</p>
+</li>
+<li><p>设置路由传参</p>
+<ol>
+<li><p>main.js配置路由有参数，形式为 {path:/dt/:mid}</p>
+</li>
+<li><p>应用中 Movie.vue 要给请求的路由传递参数  <router-link to="/dt/1002"></router-link></p>
+</li>
+<li><p>在Detail.vue中获取路由参数  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">this.$route.params.xxxx</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+</li>
+</ol>
+<p><img src="img(online)/1566271132803.png" alt="1566271132803"></p>
+<p>小结：</p>
+<ol>
+<li>路由处  通过 :xxx   的方式告知当前路由有参数</li>
+<li>应用处，要给路由把参数设置好   to=”/dt/1003”</li>
+<li>接收参数   this.$route.params.xxx</li>
+<li><router-link tag="li"> 设置切换按钮通过指定的标签生成出来</router-link></li>
+</ol>
+<h2 id="路由-编程式导航-介绍"><a href="#路由-编程式导航-介绍" class="headerlink" title="路由-编程式导航-介绍"></a>路由-编程式导航-介绍</h2><p>导航：变换浏览器#锚点信息，使得一个组件显示出来，这个过程就是导航</p>
+<ul>
+<li>声明式导航：router-link可以编译生成超链接按钮，单击按钮就显示对应的组件，这个称谓“声明式导航”</li>
+<li>编程式导航：有时由于业务需要，一个组件被显示其实并不方便通过<strong>按钮</strong>单击实现，相反是要通过<strong>程序代码</strong>的方式给显示出来，就是“编程式导航”</li>
+</ul>
+<p>编程式导航的实现：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">路由对象.push(锚点信息，不带#号)   // 根据锚点执行指定的路由</span><br><span class="line">路由对象.back()  // 返回</span><br><span class="line">路由对象.forward()  // 前进</span><br><span class="line"></span><br><span class="line">在组件实例中 路由对象======= this.$router</span><br></pre></td></tr></table></figure>
+
+<h2 id="路由-编程式导航-简单使用"><a href="#路由-编程式导航-简单使用" class="headerlink" title="路由-编程式导航-简单使用"></a>路由-编程式导航-简单使用</h2><p>目标：给电影详情页面设置返回按钮，单击可以返回列表页面</p>
+<p><img src="img(online)/1566271947084.png" alt="1566271947084"></p>
+<h2 id="路由-守卫-介绍"><a href="#路由-守卫-介绍" class="headerlink" title="路由-守卫-介绍"></a>路由-守卫-介绍</h2><p>守卫：每个路由在执行的时候都会经历一些”<strong>关卡</strong>“，关卡根据业务要求可以做决定是否执行当前路由 或 执行其他路由 或 停止执行，这个关卡就是守卫</p>
+<p>相关的守卫有<strong>很多</strong>，我们要学习使用的路由名称为“<strong>前置路由守卫</strong>”</p>
+<p>这个路由特点：所有的路由在执行之前要会经过该守卫</p>
+<p>为什么使用守卫：</p>
+<p>答：在项目中，每个路由根据情形不一样，有时会让显示对应的组件，有时不让显示，这个让或不让就是路由守卫来做判断，例如后台首页面组件要求只有处于登录状态才可以访问，判断是否登录就是守卫做的工作</p>
+<h2 id="路由-守卫-简单使用"><a href="#路由-守卫-简单使用" class="headerlink" title="路由-守卫-简单使用"></a>路由-守卫-简单使用</h2><p>要使用的守卫 是前置路由守卫</p>
+<p>特点：所有的路由都会执行</p>
+<p>使用示例：</p>
+<p><img src="img(online)/1566273375670.png" alt="1566273375670"></p>
+<h2 id="WebStorage-介绍"><a href="#WebStorage-介绍" class="headerlink" title="WebStorage-介绍"></a>WebStorage-介绍</h2><p>WebStorage的实现具体分为两种：</p>
+<ul>
+<li>localStorage（本地存储）：持久存储</li>
+<li>sessionStorage（会话存储）：会话级(临时)存储，数据是临时的(关闭浏览器或关闭浏览器标签都会造成数据丢失)</li>
+</ul>
+<p>各自特点为：</p>
+<p>localStorage的生命周期是永久的，关闭页面或浏览器之后localStorage中的数据也不会消失。除非主动删除数据，否则数据永远不会消失</p>
+<p>sessionStorage的生命周期是在仅在当前会话下有效，只要这个浏览器<code>标签窗口</code>没有关闭，即使刷新页面或者进入同源另一个页面，数据依然存在，关闭了浏览器标签窗口后就会被销毁</p>
+<p>应用场景：</p>
+<p>localStorage：用于长期登录（+判断用户是否已登录），适合长期保存在本地的数据。</p>
+<p>sessionStorage：敏感账号一次性登录</p>
+<h2 id="路由-案例-强制登录"><a href="#路由-案例-强制登录" class="headerlink" title="路由-案例-强制登录"></a>路由-案例-强制登录</h2><p>目标：</p>
+<p>实现一个简单用户登录后台系统的业务逻辑</p>
+<p>通过“sessionStorage”记录当前用户登录状态</p>
+<p>通过“路由守卫”判断当前用户是否处于登录状态，并决定是否可以访问后台页面</p>
+<p>步骤：</p>
+<ol>
+<li><p>在components目录创建业务组件  Home.vue  和 Login.vue</p>
+</li>
+<li><p>在main.js中  给业务组件做  引入、注册路由 事宜</p>
+</li>
+<li><p>在Login.vue中绘制登录form表单，用户名密码双向数据绑定，methods方法实现登录导航</p>
+</li>
+<li><p>记住管理员的登录状态，用户一旦登录系统，<strong>后端服务器</strong>要给前端返回一个<strong>标志信息(胸牌)</strong>，前端要在浏览器中把这个标志信息存储起来用以表明我们处于登录状态，如果浏览器中没有这个标志信息，就是退出状态的</p>
+<p>(学员的胸牌)</p>
+<p>登录标志信息专业术语名称：token秘钥信息</p>
+<p>暂时模拟登录解决：(登录系统的时候)自己创建一个token秘钥信息，存储给浏览器即可</p>
+<p>在Login.vue中通过window.sessionStorage(token,xxx) 实现浏览器存储登录秘钥信息</p>
+<p>示例：</p>
+<p><img src="img(online)/1566275298874.png" alt="1566275298874"></p>
+</li>
+</ol>
+<ol start="5">
+<li><p>一旦token消失，用户已经退出系统，就禁止访问后台首页，相反还要强制去访问登录页面</p>
+<p>(具体在<strong>路由守卫</strong>处实现判断处理)</p>
+<p>实现示例：</p>
+<p><img src="img(online)/1566275712117.png" alt="1566275712117"></p>
+</li>
+</ol>
+<p>小结：</p>
+<ol>
+<li>业务组件  Home.vue  Login.vue</li>
+<li>登录状态：Login.vue登录系统通过sessionStorage模拟存储token秘钥数据</li>
+<li>判断非登录状态禁止访问后台页面：  main.js  路由守卫   </li>
+</ol>
+<p>作业：</p>
+<ol>
+<li>练习实现 子路由 案例效果</li>
+<li>练习实现 强制 登录 案例</li>
+</ol>
+
+            </div>
+
+            <!-- Post Comments -->
+            
+    <!-- 使用 DISQUS_CLICK -->
+<div id="disqus-comment">
+    <div id="disqus_thread"></div>
+
+<!-- add animation -->
+<style>
+	.disqus_click_btn {
+            line-height: 30px;
+            margin: 0;
+            min-width: 50px;
+            padding: 0 14px;
+            display: inline-block;
+            font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0;
+            overflow: hidden;
+            will-change: box-shadow;
+            transition: box-shadow .2s cubic-bezier(.4, 0, 1, 1), background-color .2s cubic-bezier(.4, 0, .2, 1), color .2s cubic-bezier(.4, 0, .2, 1);
+            outline: 0;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            vertical-align: middle;
+            border: 0;
+            background: rgba(158, 158, 158, .2);
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+            color: #fff;
+            background-color: #7EC0EE;
+            text-shadow: 0
+        }
+</style>
+	
+<div class="btn_click_load" id="disqus_bt"> 
+    <button class="disqus_click_btn">点击查看评论</button>
+</div>
+
+<!--
+<script type="text/javascript">
+$('.btn_click_load').click(function() {
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'http-miccall-tech'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+
+    document.getElementById('disqus_bt').style.display = "none";
+});
+</script>
+-->
+<script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'http://yoursite.com/2018/03/27/路由/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://yoursite.com/2018/03/27/路由/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+
+<script type="text/javascript">
+    $('.btn_click_load').click(function() {  //click to load comments
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document;
+            var s = d.createElement('script');
+            s.src = '//http-miccall-tech.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', + new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+        $('.btn_click_load').css('display','none');
+    });
+</script>
+</div>
+<style>
+    #disqus-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+
+        </div>
+        <!-- Copyright 版权 start -->
+                <div id="copyright">
+            <ul>
+                <li>&copy;Powered By <a href="https://hexo.io/zh-cn/" style="border-bottom: none;">hexo</a></li>
+                <li>Design: <a href="http://miccall.tech " style="border-bottom: none;">miccall</a></li>
+            </ul>
+            
+                <span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+			
+        </div>
+    </div>
+</body>
+
+
+
+ 	
+</html>
